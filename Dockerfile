@@ -5,7 +5,7 @@ COPY . .
 RUN cd /tmp/build-dir && mvn package
 
 ### Production stage
-FROM java:8-jre
+FROM openjdk:8
 LABEL maintainer="Oliver Hoogvliet <oliver.hoogvliet@codecentric.de>, Raimar Falke <raimar.falke@codecentric.de>"
 RUN groupadd -r app && useradd --no-log-init -r -g app app
 WORKDIR /home/app
