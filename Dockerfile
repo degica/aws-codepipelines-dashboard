@@ -1,5 +1,5 @@
 ### Build stage
-FROM maven:3.5.2-jdk-8 as builder
+FROM maven:3.5.2-jdk-8 AS builder
 WORKDIR /tmp/build-dir
 COPY . .
 RUN cd /tmp/build-dir && mvn package
